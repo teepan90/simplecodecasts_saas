@@ -33,7 +33,16 @@
         </div>
     </nav>
     <div class = "container">
-         <%= yield %>
+        
+        <!--A flash is just a hash key value pair so we use a .each to access each element in it.-->
+        <% flash.each do |key,value| %>
+            <!--This is a tag helper, it helps you make a div tag with this value and applies the class specified.-->
+            <%= content_tag :div, value, class: "alert alert-#{key}" %>
+        <% end %>
+        
+        
+        <%= yield %>
+        
     </div>
    
 </body>
