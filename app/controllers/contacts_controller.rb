@@ -21,7 +21,7 @@ class ContactsController < ApplicationController
             
             
             # This is how you call the mailer
-            ContactMailer.contact_email(name,email,body).deliver
+             ContactMailer.contact_email(name, email, body).deliver
             
             # A flash is part of rails to display messages, its a key value pair so basically a hash
             flash[:success] = 'Message sent'

@@ -1,18 +1,10 @@
+
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        
-        
-    </head>
-    
-    <body>
-        <!--These variables come fromt he contact_mailer.rb file that we defined earlier -->
-        <p>You have recieved a messge frmot he site's contac form, from <%= "#{ @name }, #{ @email }, #{@email }." %></p>
-        <p> <%= @body %> </p>
-    </body>
-    
-    
-    
-    
+  <head>
+  </head>
+  <body>
+    <p>You have received a message from the site's contact form, from <%= "#{ @name }, #{ @email }." %></p>
+    <p><%= @body %></p>
+  </body>
 </html>
